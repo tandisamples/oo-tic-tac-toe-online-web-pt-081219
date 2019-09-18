@@ -10,7 +10,7 @@ class TicTacToe
     [1, 4, 7], #Second Column
     [2, 5, 8], #Third Column
     [0, 4, 8], #1-9 Diagonal
-    [2, 4, 6], #3-7 Diagonal
+    [6, 4, 2], #3-7 Diagonal
     ]
     
     def initialize
