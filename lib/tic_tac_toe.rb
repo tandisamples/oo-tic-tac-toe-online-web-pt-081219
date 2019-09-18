@@ -53,17 +53,14 @@ class TicTacToe
     @board[board_index] == "X" || @board[board_index] == "0"
   end
   
-  def valid_move?(input)
-    !(position_taken?(input)) && input.between?(0, @board.length - 1)
+  def valid_move?(board_index)
+    !(position_taken?(board_index)) && board_index.between?(0,8)
   end
   
   def turn_count
-    count = 0 
+    @board.count{|token| token == "X" || token == "0"}
     
-    @board.each do |index|
-      if (index != " ")
-        count += 1
-      end
+  end
     end
     
     count
