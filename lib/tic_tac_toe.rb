@@ -33,10 +33,10 @@ class TicTacToe
   end
   
   def display_board
-    puts " -----------"
-    puts " #{@board[0]} | #{@board[1]} | #{@boad[2]} "
-    puts " #{@board[3]} | #{@board[4]} | #{@boad[5]} "
-    puts " #{@board[6]} | #{@board[7]} | #{@boad[8]} "
+    puts " ----------- "
+    puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
+    puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
+    puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
   
   def input_to_index(input)
@@ -48,7 +48,7 @@ class TicTacToe
   end
   
   def postion_taken?(input)
-    @board[input] != " " ? true : FALSE
+    @board[input] != " " ? true : false
   end
   
   def valid_move?(input)
@@ -71,7 +71,7 @@ class TicTacToe
     (turn_count.even?) ? "X" : "0"
   end
   
-  def turn_count
+  def turn
     puts "Select a position between 1-9"
     input = gets
     index = input_to_index(input)
@@ -99,7 +99,8 @@ def won?
       @board[element_array[2]],
       ]
       
-      #X or O 
+      #X or 0 
+      
       if inspected_array.all?{|el| el == "X"} || inspected_array.all?{|el| el == "0"}
         winning_array = element_array
         @winner = inspected_array[0]
@@ -126,6 +127,7 @@ def won?
   def winner
     (won?) ? @winner : nil
   end
+  
 end
         
 
